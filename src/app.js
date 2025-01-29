@@ -1,11 +1,40 @@
-/* eslint-disable */
-import "bootstrap";
-import "./style.css";
+let who = [
+  "My Dog",
+  "<span>Optimus prime </span>",
+  "Billy",
+  "My Mom",
+  "My Brother",
+  "<i>My Grandma</i>"
+];
+let what = [
+  "<i>Anhialated </i>",
+  "Cooked",
+  "Ate",
+  "Destroyed",
+  "<strong>Exploded</strong>",
+  "<span>Vanished to the shadow realm</span>"
+];
+let thing = ["My Homework", "My Proyect", " My Computer", "My house"];
+let when = [
+  "While I was working out",
+  "yesterday",
+  "A few hours ago",
+  "while I was showering",
+  "the day before yesterday"
+];
 
-import "./assets/img/rigo-baby.jpg";
-import "./assets/img/4geeks.ico";
+function pickrandom(arr) {
+  let pick = Math.random() * arr.length;
+  return arr[Math.floor(pick)];
+}
 
-window.onload = function() {
-  //write your code here
-  console.log("Hello Rigo from the console!");
-};
+let str =
+  pickrandom(who) +
+  " " +
+  pickrandom(what) +
+  " " +
+  pickrandom(thing) +
+  " " +
+  pickrandom(when);
+
+document.getElementById("here").innerHTML = str;
