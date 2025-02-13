@@ -23,18 +23,18 @@ let when = [
   "the day before yesterday"
 ];
 
-function pickrandom(arr) {
-  let pick = Math.random() * arr.length;
-  return arr[Math.floor(pick)];
+function pickRandomElement(array) {
+  let pick = Math.random() * array.length;
+  return array[Math.floor(pick)];
 }
 
-let str =
-  pickrandom(who) +
+let excuseHeading =
+  pickRandomElement(who) +
   " " +
-  pickrandom(what) +
+  pickRandomElement(what) +
   " " +
-  pickrandom(thing) +
+  pickRandomElement(thing) +
   " " +
-  pickrandom(when);
+  pickRandomElement(when);
 
-document.getElementById("here").innerHTML = str;
+document.getElementById("excuse-heading").innerHTML = excuseHeading;
